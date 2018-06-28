@@ -1,6 +1,5 @@
 # Ultima versao LTS
 FROM       ubuntu:bionic 
-FROM       prgs/template-rbenv:release-1.1
 
 MAINTAINER Paulo Rogério "psilva.gomes.rogerio@gmail.com"
 
