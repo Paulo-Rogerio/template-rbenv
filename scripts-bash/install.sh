@@ -2,7 +2,7 @@
 cd `dirname $0`
 
 # Ajuste no Bash
-if [[ $(readlink /bin/sh) == "/bin/bash" ]];
+if [ $(readlink /bin/sh) == "/bin/bash" ];
 then
   echo "Bash Padrão /bin/bash"
 else
