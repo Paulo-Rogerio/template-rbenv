@@ -17,7 +17,7 @@ then
     # Rbenv PATH (Usuário sistemas)
     echo "# Rbenv PATH" >> ~/.bashrc
     echo "export RBENV_ROOT="/usr/local/rbenv"" >> ~/.bashrc
-    echo 'export PATH=${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:${RBENV_ROOT}/plugins/ruby-build/bin:$PATH' >> ~/.bashrc
+    echo 'export PATH=${RBENV_ROOT}/bin:${RBENV_ROOT}/libexec:${RBENV_ROOT}/shims:${RBENV_ROOT}/plugins/ruby-build/bin:$PATH' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
     # Rbenv PATH Global
