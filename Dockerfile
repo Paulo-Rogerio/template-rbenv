@@ -25,9 +25,9 @@ RUN       apt-get update -yq && \
 RUN       echo "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list 
 RUN       wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
-# Repo Passenger
-RUN       echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger $(lsb_release -cs) main" > /etc/apt/sources.list.d/passenger.list
-RUN       apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 
+# # Repo Passenger
+# RUN       echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger $(lsb_release -cs) main" > /etc/apt/sources.list.d/passenger.list
+# RUN       apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 
 
 # Repo Chrome
 RUN       wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - 
@@ -78,8 +78,6 @@ RUN       apt-get update -yq && \
             libffi-dev \
             rsyslog \
             rsyslog-gnutls \
-            passenger \
-            passenger-dev \
             nginx \
             wkhtmltopdf \
             libfontconfig1 \
