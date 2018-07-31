@@ -61,7 +61,6 @@ RUN       apt-get update -yq && \
             vim \
             git \
             apt-transport-https \
-            libnginx-mod-http-passenger \
             vim \
             postgresql-10 \
             dirmngr \
