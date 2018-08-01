@@ -12,11 +12,11 @@ then
 
     ## Install ruby-build
     git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build
-    cd ${RBENV_ROOT}/plugins/ruby-build && PREFIX=/usr/local/rbenv/plugins ./install.sh
+    cd ${RBENV_ROOT}/plugins/ruby-build && PREFIX=${RBENV_ROOT}/plugins ./install.sh
 
     # Rbenv PATH (Usuário sistemas)
     echo "# Rbenv PATH" >> ~/.bashrc
-    echo "export RBENV_ROOT="/usr/local/rbenv"" >> ~/.bashrc
+    echo "export RBENV_ROOT="$RBENV_ROOT"" >> ~/.bashrc
     echo 'export PATH=$RBENV_ROOT/bin:$RBENV_ROOT/libexec:$RBENV_ROOT/shims:$RBENV_ROOT/plugins/ruby-build/bin:$PATH' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
     source ~/.bashrc
