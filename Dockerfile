@@ -6,7 +6,7 @@ MAINTAINER Paulo Rogério "psilva.gomes.rogerio@gmail.com"
 # Variaveis de Ambiente
 ENV       LANG C.UTF-8
 ENV       DEBIAN_FRONTEND noninteractive
-ENV       USUARIO sistemas
+ENV       PATH="/usr/local/rbenv/libexec:/usr/local/rbenv/bin:$PATH"
 
 RUN       apt-get update -yq && \
           apt-get upgrade -yq && \
