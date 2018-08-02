@@ -53,6 +53,7 @@ RUN       apt-get update -yq && \
             libcurl4-openssl-dev \
             libffi-dev \
             nodejs \
+            net-tools \
             vim \
             git \
             apt-transport-https \
@@ -122,6 +123,15 @@ RUN      chmod +x /scripts-bash/*.sh
 
 # Install
 RUN      /scripts-bash/install.sh
+
+# Variaveis de Ambiente
+ENV       RBENV_ROOT /root/.rbenv
+ENV       PATH "$RBENV_ROOT/bin:$RBENV_ROOT/shims:$RBENV_ROOT/libexec:$RBENV_ROOT/plugins/ruby-build/bin:$PATH"
+RUN       eval "$(rbenv init -)"
+
+RUN       mkdir -p /app
+WORKDIR   /app
+VOLUME    ["/app"]
 
 # Clean
 RUN      /scripts-bash/clean.sh
