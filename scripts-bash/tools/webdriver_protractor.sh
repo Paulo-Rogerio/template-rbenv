@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Instalando webdriver e Protractor"
-npm install --unsafe-perm --save-exact -g protractor && npm update 
+npm install -g protractor@latest
+npm update 
 export NODE_PATH=/usr/lib/node_modules
 npm install --unsafe-perm -g \
             jasmine-reporters \
