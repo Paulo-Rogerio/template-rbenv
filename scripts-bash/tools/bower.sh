@@ -1,6 +1,6 @@
 #!/bin/bash
 
-which bower >/dev/null
+npm install -g bower
 if [[ $? -eq 0 ]]
 then
     echo "Bower instalado: $(bower --version)"

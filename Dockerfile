@@ -45,6 +45,7 @@ RUN       apt-get update -yq && \
             libpq-dev \
             libmysqlclient-dev \
             libsqlite3-dev \
+            libssl-doc \
             sqlite3 \
             libxml2-dev \
             libxslt1-dev \
@@ -62,6 +63,7 @@ RUN       apt-get update -yq && \
             dirmngr \
             gnupg \
             openssh-client \
+            openjdk-8-jdk \
             nginx \
             autoconf \
             bison \
