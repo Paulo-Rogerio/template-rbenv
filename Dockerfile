@@ -79,7 +79,8 @@ RUN       apt-get update -yq && \
             wkhtmltopdf \
             libfontconfig1 \
             libfontconfig1-dev \
-            xvfb
+            xvfb \
+            fluxbox
 
 # Dependencias para Protrector
 RUN 	  apt-get update -yq && \
