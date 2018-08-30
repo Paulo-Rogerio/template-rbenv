@@ -123,7 +123,8 @@ RUN      apt-mark hold firefox
 # Copy scripts
 RUN 	 mkdir -p ./scripts-bash
 COPY     ./scripts-bash /scripts-bash
-RUN      chmod +x /scripts-bash/*.sh 
+RUN      chmod +x /scripts-bash/*.sh
+RUN      cp /scripts-bash/x11_server.sh /root
 
 # Install
 RUN      /scripts-bash/install.sh
@@ -139,3 +140,5 @@ VOLUME    ["/app"]
 
 # Clean
 RUN      /scripts-bash/clean.sh
+
+ENTRYPOINT [ "/root/x11_server.sh" ]

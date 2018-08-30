@@ -1,1 +1,0 @@
-/usr/bin/fluxbox -display :99 -screen 0 &
