@@ -91,6 +91,7 @@ RUN 	  apt-get update -yq && \
             xfonts-75dpi \
             xfonts-cyrillic \
             xfonts-scalable \
+            x11-apps \
             ttf-ubuntu-font-family \
             libfreetype6 \
             libfontconfig
